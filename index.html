@@ -1,0 +1,658 @@
+<HEAD>
+    <title>Keiga Electronic Inc.</title>
+    <style>
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            /*width: 200px;*/
+
+        }
+        ul.sidebar{
+            background-color: #f1f1f1;
+        }
+
+        li a {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        li a.active {
+            background-color: #000;
+            border-bottom: 2px solid;
+            border-bottom-color: red;
+            color: white;
+        }
+
+        li a:hover:not(.active) {
+            background-color: grey;
+            color: white;
+        }
+
+        #main-header{
+            border-bottom: 5px solid; 
+            border-bottom-color: red; 
+            background-color: black; 
+            color:white; 
+            height:3em;
+        }
+        #header{
+            border-bottom: 2px solid; 
+            border-bottom-color: red; 
+            background-color: black; 
+            color:white; 
+            height:3em;
+        }
+
+        .navbar-header{
+            color: white;
+            font-size: 30px;
+        }
+        .black{
+            background-color: black;
+
+        }
+        .grey{
+            background-color: grey;
+
+        }
+        #white{
+            color:white;
+        }
+        textarea{
+            resize:none;
+        }
+        #admin-field{
+            margin:15px 0px;
+            width:80%;
+            text-align: center;
+        }
+        #regist-field{
+            margin:0px 0px 15px;
+        }
+        #ip-field{
+            margin:15px 0px;
+            width:60%;
+            text-align: center;
+        }
+        b{
+            color:white;
+        }
+        #percentage{
+            color:darkgrey;
+        }
+        input#volume-1, #volume-2, #volume-3, #volume-4, #volume-5, #volume-6, #volume-7, #volume-8, #volume-9,#volume-10 {
+            color:black;
+            width: 30%;
+        }
+
+        #volumeUp,
+        #volumeDown{
+            color:white;
+            margin: 1em;
+        }
+        #shade .slider-selection {
+            background: darkgrey;
+        }
+
+        /*
+        * Hidden Divs
+        */
+        .admin-login{
+            display:non;
+        }
+        .admin-change{
+            display:none;
+        }
+        .registration{
+            display:none;
+
+        }
+        .ipsetting{
+            display:none;
+
+        }
+
+        .systemfunction{
+            display:none;    
+
+        }
+        .input{
+
+        }
+        .soundeffect{
+
+        }
+        .firmware{
+
+        }
+
+    </style>
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap-slider.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap-slider.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <script type="text/javascript" src="bootstrap.min.js"></script>
+    <script type="text/javascript" src="bootstrap-slider.min.js"></script>
+    <script type=text/javascript>
+        function hideAll(){
+            $('.admin-login').css("display", "none");
+            $('.admin-change').css("display", "none");
+            $('.registration').css("display", "none");
+            $('.ipsetting').css("display", "none");
+            $('.systemfunction').css("display","none");
+
+            $('#admin-login').removeClass('active');
+            $('#registration').removeClass('active');
+            $('#ipsetting').removeClass('active');
+            $('#systemfunction').removeClass('active');
+            $('#input').removeClass('active');
+            $('#soundeffect').removeClass('active');
+            $('#firmware').removeClass('active');
+        }
+        function registration(){
+            hideAll();
+            $('.registration').css("display", "block");
+            $('#registration').addClass('active');
+        }
+        function adminchange(){
+            hideAll(); 
+            $('.admin-change').css("display", "block");
+            $('#admin-login').addClass('active');
+        }
+        function adminlogin(){
+            hideAll();
+            $('.admin-login').css("display", "block");
+            $('#admin-login').addClass('active');
+        }
+        function ipsetting(){
+            hideAll();
+            $('.ipsetting').css("display", "block");
+            $('#ipsetting').addClass('active');
+        }
+        function systemfunction(){
+            hideAll();
+            //TODO
+            $('.systemfunction').css("display","block");
+            $('#systemfunction').addClass('active');
+        }
+        function input(){
+            hideAll();
+            //TODO
+
+            $('#input').addClass('active');
+        }
+        function soundeffect(){
+            hideAll();
+            //TODO
+
+            $('#soundeffect').addClass('active');
+        }
+        function firmware(){
+            hideAll();
+            //TODO
+
+            $('#firmware').addClass('active');
+        }
+
+        function volDown(){
+
+        }
+        function volUp(){
+            console.log(this.id)
+        }
+    </script>
+
+</HEAD>
+<html>
+    <!--div class="container"-->
+    <body style="background-color:lightgrey;">
+        <div class="text-center">AMOR Web 12:35PM, JULY-28-2017</div>
+        <div class="container-fluid">
+
+            <div class="row"> 
+                <div class="col-md-2"> <h2 class="text-center">keiga</h2></div>
+                <div class="col-md-10 "> 
+                    <div id="main-header" >M4-3.1</div>
+                </div>
+            </div>
+            <div class="row">
+
+                <!--SideBar-->
+                <div class="col-md-2">
+                    <ul class="sidebar">
+                        <li><a id="admin-login" class="active" href="#" onclick=adminlogin()>Administrator</a></li>
+                        <li><a id="registration" href="#" onclick=registration()>Registration</a></li>
+                        <li><a id="ipsetting" href="#" onclick=ipsetting()>IP Setting</a></li>
+                        <li><a id="systemfunction"href="#" onclick=systemfunction()>System Function</a></li>
+                        <li><a id="input" href="#" onclick=input()>Input</a></li>
+                        <li><a id="soundeffect" href="#" onclick=soundeffect()>Sound Effect</a></li>
+                        <li><a id="firmware" href="#" onclick=firmware()>Firmware</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-10">
+                    <!--Admin Login-->
+                    <div class="row">
+                        <div class="col-md-5 admin-login">
+                            <div class="text-center" id="header"><p>Access accepted</p></div>
+                        </div>
+                        <div class="col-md-7 admin-login"></div>
+                    </div>
+                    <div class="row admin-login">
+                        <div class="col-md-5">
+                            <div class="col-md-4 black">
+                                <ul class="text-center">
+                                    <li><b>Model number</b></li>
+                                    <li><input type="text" id="admin-field"></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 grey">
+                                <ul class="text-center">
+                                    <li><b>Account</b></li>
+                                    <li><input type="text" id="admin-field"></li>
+                                    <li ><a href="#" onclick=adminchange() style="color:white;">change account/password?</a></li>
+                                </ul>    
+                            </div>
+                            <div class="col-md-4 black">
+                                <ul class="text-center">
+                                    <li><b>Password</b></li>
+                                    <li><input type="password" id="admin-field"></li>
+                                    <li><input type="submit" style="color:black" value="Enter"></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!--Admin Change-->
+                    <div class="row">
+                        <div class="col-md-5 admin-change">
+                            <div class="text-center" id="header"><p>Change account/password</p></div>
+                        </div>
+                        <div class="col-md-7 admin-change"></div>
+                    </div>
+                    <div class="row admin-change">
+                        <div class="col-md-5">
+                            <div class="col-md-3 black">
+                                <ul class="text-center">
+                                    <li><b>Old account</b></li>
+                                    <li ><input type="text" id="admin-field" value="read-only" readonly></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3 grey">
+                                <ul class="text-center">
+                                    <li><b>New Account</b></li>
+                                    <li><input type="text" id="admin-field"></li>
+                                </ul>    
+                            </div>
+                            <div class="col-md-3 black">
+                                <ul class="text-center">
+                                    <li><b>New Password</b></li>
+                                    <li><input type="password" style="color:black" id="admin-field"></li>
+                                    <li><b>Confirm Password</b></li>
+                                    <li><input type="password" style="color:black" id="admin-field"></li>
+
+                                </ul>
+                            </div>
+                            <div class="col-md-3 grey">
+                                <ul class="text-center">
+                                    <li><input type="submit" style="color:white; background-color:black;" id="admin-field" value="Confirm"></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!--Registration-->
+                    <div class="row">
+                        <div class="col-md-8 registration" >
+                            <div id="header"></div>
+                        </div>
+
+                        <div class="col-md-4 registration"></div>
+                    </div>
+                    <div class="row registration">
+                        <div class="col-md-8">
+                            <div class="col-md-3 black">
+                                <ul class="text-center">
+                                    <li><h3><b>Owner</b></h3></li>
+                                    <li id="white">Name</li>
+                                    <li><input type="text" id="regist-field"></li>
+                                    <li id="white">Home#</li>
+                                    <li><input type="text" id="regist-field"></li>
+                                    <li id="white">Mobile#</li>
+                                    <li><input type="text" id="regist-field"></li>
+                                    <li id="white">Address</li>
+                                    <li><textarea rows="4" id="regist-field"></textarea></li>
+                                    <li id="white">Zip</li>
+                                    <li><input type="text" id="regist-field"></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3 grey">
+                                <ul class="text-center">
+                                    <li><h3><b>Installer</b></h3></li>
+                                    <li id="white">Name</li>
+                                    <li><input type="text" id="regist-field"></li>
+                                    <li id="white">Store/Company</li>
+                                    <li><textarea rows="4" id="regist-field"></textarea></li>
+                                    <li id="white">Business Address</li>
+                                    <li><textarea rows="4" id="regist-field"></textarea></li>
+                                    <li id="white">Zip</li>
+                                    <li><input type="text" id="regist-field"></li>
+                                </ul>    
+                            </div>
+                            <div class="col-md-3 black">
+                                <ul class="text-center">
+                                    <li><h3><b>Product Info.</b></h3></li>
+                                    <li id="white">Brand</li>
+                                    <li><input type="password" id="regist-field"></li>
+                                    <li id="white">Model number</li>
+                                    <li><input type="password" id="regist-field"></li>
+                                    <li id="white">Model number?</li>
+                                    <li><input type="password" id="regist-field"></li>
+
+
+                                </ul>
+                            </div>
+                            <div class="col-md-3 grey">
+                                <ul class="text-center">
+                                    <li><h3><b>Warranty</b></h3></li>
+                                    <li id="white">Purchasing</li>
+                                    <li><input type="text" id="regist-field"></li>
+                                    <li id="white">Warranty Period</li>
+                                    <li><input type="text" id="regist-field"></li>
+                                    <li id="white">Warranty Expiracy</li>
+                                    <li><textarea rows="4" id="regist-field"></textarea></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--IP Settings-->
+                    <div class="row">
+                        <div class="col-md-12 ipsetting">
+                            <div id="header"></div>
+                        </div>
+                    </div>
+                    <div class="row ipsetting">
+                        <div class="col-md-12">
+                            <div class="col-md-2 black"> 
+                                <ul class="text-center">
+                                    <li><b>IP number</b></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-2 grey">
+                                <ul class="text-center">
+                                    <li><b>Subnet</b></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-2 black">
+                                <ul class="text-center">
+                                    <li><b>Gateway</b></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-2 grey">
+                                <ul class="text-center">
+                                    <li><b>DNS1</b></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-2 black">
+                                <ul class="text-center">
+                                    <li><b>DNS2</b></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-2 grey">
+                                <ul class="text-center">
+                                    <li>
+                                        <h4 style="color:white; margin-top:2em">Fixed IP</h4><input type="checkbox" style="color: red">
+                                    </li>
+                                    <li>
+                                        <h4 style="color:white; margin-top:2em">DHCP mode</h4> <input type="checkbox">
+                                    </li>
+                                    <li><input type="submit" value="Submit" style="margin-top:2em"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--System Function-->
+                    <div class="row">
+                        <div class="col-md-8 systemfunction">
+                            <div id="header" class="text-center" ><h4><b >Channel balance</b></h4></div>
+                        </div>
+                    </div>
+                    <div class="row systemfunction">
+                        <div>
+                            <div class="col-md-8">
+                                <div class="col-md-3 black"> 
+                                    <ul class="text-center">
+                                        <li><h4><b>Line1</b></h4></li>
+                                        <li id="percentage">100%</li>
+                                        <input id="line1" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
+                                        <li id="percentage">0</li>
+                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown'></span>
+                                            <input id="volume-1" type="text"> 
+                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp'></span></li>
+                                    </ul>
+                                </div>
+
+                                <!----------------------------------------------------------ex4--------------------------------------->
+                                <div class="col-md-3 grey">
+                                    <ul class="text-center">
+                                        <li><h4><b>Line2</b></h4></li>
+                                        <li id="percentage">100%</li>
+                                        <input id="line2" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
+                                        <li id="percentage">0</li>
+                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown'></span>
+                                            <input id="volume-2" type="text"> 
+                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp'></span></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3 black"> 
+                                    <ul class="text-center">
+                                        <li><h4><b>Optical L</b></h4></li>
+                                        <li id="percentage">100%</li>
+                                        <input id="opticall" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
+                                        <li id="percentage">0</li>
+                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown'></span>
+                                            <input id="volume-3" type="text"> 
+                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp'></span></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3 grey">
+                                    <ul class="text-center">
+                                        <li><h4><b>Optical R</b></h4></li>
+                                        <li id="percentage">100%</li>
+                                        <input id="opticalr" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
+                                        <li id="percentage">0</li>
+                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown'></span>
+                                            <input id="volume-4" type="text"> 
+                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp'></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-4"> 
+                                <div class="col-md-6 black"> 
+                                    <ul class="text-center">
+                                        <li><h4><b>Master volume</b></h4></li>
+                                        <li id="percentage">100%</li>
+                                        <input id="mastervolume" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
+                                        <li id="percentage">0</li>
+                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown'></span>
+                                            <input id="volume-5" type="text"> 
+                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp'></span></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6 grey">
+                                    <ul class="text-center">
+                                        <li><h4><b>Limitation</b></h4></li>
+                                        <li id="percentage">100%</li>
+                                        <input id="limitation" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
+                                        <li id="percentage">0</li>
+                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown'></span>
+                                            <input id="volume-6" type="text"> 
+                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp'></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row systemfunction">
+                        <div>
+                            <div class="col-md-8">
+                                <div class="col-md-3 grey">
+                                    <ul class="text-center">
+                                        <li><h4><b>Line3</b></h4></li>
+                                        <li id="percentage">100%</li>
+                                        <input id="line3" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
+                                        <li id="percentage">0</li>
+                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown'></span>
+                                            <input id="volume-7" type="text"> 
+                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp'></span></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3 black"> 
+                                    <ul class="text-center">
+                                        <li><h4><b>Line 4</b></h4></li>
+                                        <li id="percentage">100%</li>
+                                        <input id="line4" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
+                                        <li id="percentage">0</li>
+                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown'></span>
+                                            <input id="volume-8" type="text"> 
+                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp'></span></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3 grey">
+                                    <ul class="text-center">
+                                        <li><h4><b>D-Bay L</b></h4></li>
+                                        <li id="percentage">100%</li>
+                                        <input id="dbayl" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
+                                        <li id="percentage">0</li>
+                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown'></span>
+                                            <input id="volume-9" type="text"> 
+                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp'></span></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3 black"> 
+                                    <ul class="text-center">
+                                        <li><h4><b>D-Bay R</b></h4></li>
+                                        <li id="percentage">100%</li>
+                                        <input id="dbayr" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
+                                        <li id="percentage">0</li>
+                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown'></span>
+                                            <input id="volume-10" type="text"> 
+                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp'></span></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4"> 
+                                <div class="col-md-6 grey">
+                                    filler
+                                </div>
+                                <div class="col-md-6 black"> 
+                                    filler
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <!--Input-->
+                    <!--Sound Effect-->
+                    <!--Firmware-->
+                </div>
+
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+        $("#line1").slider({
+            reversed:true
+        });
+        $("#line2").slider({
+            reversed:true
+        });
+        $("#line3").slider({
+            reversed:true
+        });
+        $("#line4").slider({
+            reversed:true
+        });
+        $("#mastervolume").slider({
+            reversed:true
+        });
+        $("#limitation").slider({
+            reversed:true
+        });
+        $("#opticall").slider({
+            reversed:true
+        });
+        $("#opticalr").slider({
+            reversed:true
+        });
+        $("#dbayl").slider({
+            reversed:true
+        });
+        $("#dbayr").slider({
+            reversed:true
+        });
+        $("#line1").on("slide", function(slideEvt) {
+            $("#volume-1").val(slideEvt.value);
+        });
+        $("#line2").on("slide", function(slideEvt) {
+            $("#volume-2").val(slideEvt.value);
+        });
+        $("#opticall").on("slide", function(slideEvt) {
+            $("#volume-3").val(slideEvt.value);
+        });
+        $("#opticalr").on("slide", function(slideEvt) {
+            $("#volume-4").val(slideEvt.value);
+        });
+        $("#mastervolume").on("slide", function(slideEvt) {
+            $("#volume-5").val(slideEvt.value);
+        });
+        $("#limitation").on("slide", function(slideEvt) {
+            $("#volume-6").val(slideEvt.value);
+        });
+        $("#line3").on("slide", function(slideEvt) {
+            $("#volume-7").val(slideEvt.value);
+        });
+        $("#line4").on("slide", function(slideEvt) {
+            $("#volume-8").val(slideEvt.value);
+        });
+        $("#dbayl").on("slide", function(slideEvt) {
+            $("#volume-9").val(slideEvt.value);
+        });
+        $("#dbayr").on("slide", function(slideEvt) {
+            $("#volume-10").val(slideEvt.value);
+        });
+    </script>
+</html>
