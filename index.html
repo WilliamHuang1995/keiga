@@ -10,7 +10,8 @@
 
         }
         ul.sidebar{
-            background-color: #f1f1f1;
+            background-color: white;
+            margin-left:5em;
         }
 
         li a {
@@ -52,11 +53,11 @@
             font-size: 30px;
         }
         .black{
-            background-color: black;
+            background-color: #262626;
 
         }
         .grey{
-            background-color: grey;
+            background-color: #595959;
 
         }
         #white{
@@ -87,10 +88,11 @@
         input#volume-1, #volume-2, #volume-3, #volume-4, #volume-5, #volume-6, #volume-7, #volume-8, #volume-9,#volume-10 {
             color:black;
             width: 30%;
+            margin:0 1em;
         }
 
-        #volumeUp,
-        #volumeDown{
+        /*selects all volume buttons*/
+        [id^=volume]{
             color:white;
             margin: 1em;
         }
@@ -127,8 +129,10 @@
 
         }
         .firmware{
-
+            display:none;
         }
+
+
 
     </style>
     <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
@@ -144,6 +148,7 @@
             $('.registration').css("display", "none");
             $('.ipsetting').css("display", "none");
             $('.systemfunction').css("display","none");
+            $('.firmware').css("display","none");
 
             $('#admin-login').removeClass('active');
             $('#registration').removeClass('active');
@@ -193,30 +198,24 @@
         }
         function firmware(){
             hideAll();
-            //TODO
 
+            $(".firmware").css("display","block");
             $('#firmware').addClass('active');
         }
 
-        function volDown(){
-
-        }
-        function volUp(){
-            console.log(this.id)
-        }
     </script>
 
 </HEAD>
 <html>
     <!--div class="container"-->
-    <body style="background-color:lightgrey;">
+    <body style="background-color:#F2F2F2;">
         <div class="text-center">AMOR Web 12:35PM, JULY-28-2017</div>
         <div class="container-fluid">
 
             <div class="row"> 
-                <div class="col-md-2"> <h2 class="text-center">keiga</h2></div>
+                <div class="col-md-2"> <img src="keiga.png" style="left:25%;position:relative; width:50%; height:4em"></div>
                 <div class="col-md-10 "> 
-                    <div id="main-header" >M4-3.1</div>
+                    <div id="main-header" >M4-2.0</div>
                 </div>
             </div>
             <div class="row">
@@ -454,22 +453,23 @@
                                         <li id="percentage">100%</li>
                                         <input id="line1" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
                                         <li id="percentage">0</li>
-                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown'></span>
-                                            <input id="volume-1" type="text"> 
-                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp'></span></li>
+                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown1'></span>
+                                            <input id="volume-1" type="text" readonly> 
+                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp1'></span></li>
+
                                     </ul>
                                 </div>
 
-                                <!----------------------------------------------------------ex4--------------------------------------->
+
                                 <div class="col-md-3 grey">
                                     <ul class="text-center">
                                         <li><h4><b>Line2</b></h4></li>
                                         <li id="percentage">100%</li>
                                         <input id="line2" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
                                         <li id="percentage">0</li>
-                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown'></span>
-                                            <input id="volume-2" type="text"> 
-                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp'></span></li>
+                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown2'></span>
+                                            <input id="volume-2" type="text" readonly> 
+                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp2'></span></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-3 black"> 
@@ -478,9 +478,9 @@
                                         <li id="percentage">100%</li>
                                         <input id="opticall" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
                                         <li id="percentage">0</li>
-                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown'></span>
-                                            <input id="volume-3" type="text"> 
-                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp'></span></li>
+                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown3'></span>
+                                            <input id="volume-3" type="text" readonly> 
+                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp3'></span></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-3 grey">
@@ -489,9 +489,9 @@
                                         <li id="percentage">100%</li>
                                         <input id="opticalr" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
                                         <li id="percentage">0</li>
-                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown'></span>
-                                            <input id="volume-4" type="text"> 
-                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp'></span></li>
+                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown4'></span>
+                                            <input id="volume-4" type="text" readonly> 
+                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp4'></span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -502,9 +502,9 @@
                                         <li id="percentage">100%</li>
                                         <input id="mastervolume" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
                                         <li id="percentage">0</li>
-                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown'></span>
-                                            <input id="volume-5" type="text"> 
-                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp'></span></li>
+                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown5'></span>
+                                            <input id="volume-5" type="text" readonly> 
+                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp5'></span></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6 grey">
@@ -513,9 +513,9 @@
                                         <li id="percentage">100%</li>
                                         <input id="limitation" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
                                         <li id="percentage">0</li>
-                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown'></span>
-                                            <input id="volume-6" type="text"> 
-                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp'></span></li>
+                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown6'></span>
+                                            <input id="volume-6" type="text" readonly> 
+                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp6'></span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -530,9 +530,9 @@
                                         <li id="percentage">100%</li>
                                         <input id="line3" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
                                         <li id="percentage">0</li>
-                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown'></span>
-                                            <input id="volume-7" type="text"> 
-                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp'></span></li>
+                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown7'></span>
+                                            <input id="volume-7" type="text" readonly> 
+                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp7'></span></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-3 black"> 
@@ -541,9 +541,9 @@
                                         <li id="percentage">100%</li>
                                         <input id="line4" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
                                         <li id="percentage">0</li>
-                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown'></span>
-                                            <input id="volume-8" type="text"> 
-                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp'></span></li>
+                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown8'></span>
+                                            <input id="volume-8" type="text" readonly> 
+                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp8'></span></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-3 grey">
@@ -552,30 +552,45 @@
                                         <li id="percentage">100%</li>
                                         <input id="dbayl" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
                                         <li id="percentage">0</li>
-                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown'></span>
-                                            <input id="volume-9" type="text"> 
-                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp'></span></li>
+                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown9'></span>
+                                            <input id="volume-9" type="text" readonly> 
+                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp9'></span></li>
                                     </ul>
                                 </div>
-                                <div class="col-md-3 black"> 
+                                <div class="col-md-3 black" id="same-height"> 
                                     <ul class="text-center">
                                         <li><h4><b>D-Bay R</b></h4></li>
                                         <li id="percentage">100%</li>
                                         <input id="dbayr" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
                                         <li id="percentage">0</li>
-                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown'></span>
-                                            <input id="volume-10" type="text"> 
-                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp'></span></li>
+                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown10'></span>
+                                            <input id="volume-10" type="text" readonly> 
+                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp10'></span></li>
                                     </ul>
                                 </div>
 
                             </div>
-                            <div class="col-md-4"> 
-                                <div class="col-md-6 grey">
-                                    filler
+                            <div class="col-md-4" style="display:flex;"> 
+                                <div class="col-md-6 grey" >
+                                    <ul class="text-center">
+                                        <li><h4><b>Audio trigger</b></h4></li>
+                                        <li><h4 id="white">Engagement</h4></li>
+                                        <li><input type="checkbox"><p id="white">On</p></li>
+                                        <li><input type="checkbox"><p id="white"> Off</p></li>
+                                        <li><input type="checkbox"><p id="white"> Auto</p></li>
+                                        <li><h4 id="white">Delay to Off</h4></li>
+                                        <li><span><select>
+                                            <option value="0">0</option>
+                                            <option value="5">5</option>
+                                            <option value="10">10</option>
+                                            <option value="15">15</option>
+                                            </select>
+                                            <p id="white">mins</p></span></li>
+
+
+                                    </ul>
                                 </div>
-                                <div class="col-md-6 black"> 
-                                    filler
+                                <div class="col-md-6" style="background-color:#B2B2B2;"> 
                                 </div>
 
                             </div>
@@ -586,49 +601,167 @@
 
 
                     <!--Input-->
+                    <div class="row input">
+                        <div class="col-md-4 text-center" style="background-color:#b2b2b2; height:2em; margin:0 0.5em;" ><h4>ZONE 1</h4></div>
+                        <div class="col-md-4 text-center" style="background-color:#b2b2b2; height:2em; margin:0 0.5em;"><h4>ZONE 2</h4></div>
+                        <div class="col-md-4"></div>
+                    </div>
+                    <div class="row input">
+                        <div class="col-md-4 text-center" id="header" style="margin:0 0.5em">
+                            <div class="col-md-6"><h3><b>1. Left-CH</b></h3></div>
+                            <div class="col-md-6"><h3><b>2. Filler-Content</b></h3></div>
+                        </div>
+                        <div class="col-md-4 text-center" id="header" style="margin:0 0.5em"></div>
+                    </div>
+                    <div class="row input"></div>
                     <!--Sound Effect-->
                     <!--Firmware-->
+                    <div class="row firmware">
+                        <div class="col-md-4">
+                            <div id="header"></div>
+                        </div>
+                        <div class="col-md-8"></div>
+                    </div>
+                    <div class="row firmware">
+                        <div class="col-md-4">
+                            <div class="col-md-6 black">
+                                <ul class="text-center">
+                                    <li><h4><b>Network(IP)</b></h4></li>
+                                    <li style="color:#777777; margin-top:4em;">Currently</li>
+                                    <li style="color:#777777">V1.2 build 271002</li>
+                                    <li id="white" style="margin-top:4em;">Latest</li>
+                                    <li id="white">V1.3 build 271003</li>
+                                    <li><input style="background-color:black; color:white; margin: 1em 0 3em;" type="button" class="btn btn-default" value="Upgrade"></li>
+
+                                </ul>
+                            </div>
+                            <div class="col-md-6 grey">
+                                <ul class="text-center">
+                                    <li><h4><b>Amplifier</b></h4></li>
+                                    <li style="color:#777777; margin-top:4em">Currently</li>
+                                    <li style="color:#777777">V2.0 build 2711003</li>
+                                    <li id="white" style="margin-top:4em;">Latest</li>
+                                    <li id="white">V2.1 build 2712001</li>
+                                    <li><input style="background-color:black; color:white; margin: 1em 0 3em;" type="button" class="btn btn-default" value="Upgrade"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </div>
     </body>
     <script type="text/javascript">
-        $("#line1").slider({
+
+        $( "span#volumeDown1" ).click(function() {
+            l1.bootstrapSlider('setValue',l1.val()-1,true);
+        });
+        $( "span#volumeUp1" ).click(function() {
+            l1.bootstrapSlider('setValue',l1.val()- -1,true);//LOL
+        });
+        $( "span#volumeDown2" ).click(function() {
+            l2.bootstrapSlider('setValue',l2.val()-1,true);
+        });
+        $( "span#volumeUp2" ).click(function() {
+            l2.bootstrapSlider('setValue',l2.val()- -1,true);//LOL
+        });
+        $( "span#volumeDown3" ).click(function() {
+            l3.bootstrapSlider('setValue',l3.val()-1,true);
+        });
+        $( "span#volumeUp3" ).click(function() {
+            l3.bootstrapSlider('setValue',l3.val()- -1,true);//LOL
+        });
+        $( "span#volumeDown4" ).click(function() {
+            l4.bootstrapSlider('setValue',l4.val()-1,true);
+        });
+        $( "span#volumeUp4" ).click(function() {
+            l4.bootstrapSlider('setValue',l4.val()- -1,true);//LOL
+        });
+        $( "span#volumeDown5" ).click(function() {
+            l5.bootstrapSlider('setValue',l5.val()-1,true);
+        });
+        $( "span#volumeUp5" ).click(function() {
+            l5.bootstrapSlider('setValue',l5.val()- -1,true);//LOL
+        });
+        $( "span#volumeDown6" ).click(function() {
+            l6.bootstrapSlider('setValue',l6.val()-1,true);
+        });
+        $( "span#volumeUp6" ).click(function() {
+            l6.bootstrapSlider('setValue',l6.val()- -1,true);//LOL
+        });
+        $( "span#volumeDown7" ).click(function() {
+            l7.bootstrapSlider('setValue',l7.val()-1,true);
+        });
+        $( "span#volumeUp7" ).click(function() {
+            l7.bootstrapSlider('setValue',l7.val()- -1,true);//LOL
+        });
+        $( "span#volumeDown8" ).click(function() {
+            l8.bootstrapSlider('setValue',l8.val()-1,true);
+        });
+        $( "span#volumeUp8" ).click(function() {
+            l8.bootstrapSlider('setValue',l8.val()- -1,true);//LOL
+        });
+        $( "span#volumeDown9" ).click(function() {
+            l9.bootstrapSlider('setValue',l9.val()-1,true);
+        });
+        $( "span#volumeUp9" ).click(function() {
+            l9.bootstrapSlider('setValue',l9.val()- -1,true);//LOL
+        });
+        $( "span#volumeDown10" ).click(function() {
+            l10.bootstrapSlider('setValue',l10.val()-1,true);
+        });
+        $( "span#volumeUp10" ).click(function() {
+            l10.bootstrapSlider('setValue',l10.val()- -1,true);//LOL
+        });
+        var l1=$("#line1").bootstrapSlider({
             reversed:true
         });
-        $("#line2").slider({
+        var l2=$("#line2").bootstrapSlider({
             reversed:true
         });
-        $("#line3").slider({
+        var l3=$("#opticall").bootstrapSlider({
             reversed:true
         });
-        $("#line4").slider({
+        var l4=$("#opticalr").bootstrapSlider({
             reversed:true
         });
-        $("#mastervolume").slider({
+        var l5=$("#mastervolume").bootstrapSlider({
             reversed:true
         });
-        $("#limitation").slider({
+        var l6=$("#limitation").bootstrapSlider({
             reversed:true
         });
-        $("#opticall").slider({
+        var l7=$("#line3").bootstrapSlider({
             reversed:true
         });
-        $("#opticalr").slider({
+        var l8=$("#line4").bootstrapSlider({
             reversed:true
         });
-        $("#dbayl").slider({
+        var l9=$("#dbayl").bootstrapSlider({
             reversed:true
         });
-        $("#dbayr").slider({
+        var l10=$("#dbayr").bootstrapSlider({
             reversed:true
         });
+        $("#volume-1").val(l1.val());
+        $("#volume-2").val(l2.val());
+        $("#volume-3").val(l3.val());
+        $("#volume-4").val(l4.val());
+        $("#volume-5").val(l5.val());
+        $("#volume-6").val(l6.val());
+        $("#volume-7").val(l7.val());
+        $("#volume-8").val(l8.val());
+        $("#volume-9").val(l9.val());
+        $("#volume-10").val(l10.val());
+
         $("#line1").on("slide", function(slideEvt) {
             $("#volume-1").val(slideEvt.value);
+
         });
         $("#line2").on("slide", function(slideEvt) {
             $("#volume-2").val(slideEvt.value);
+
         });
         $("#opticall").on("slide", function(slideEvt) {
             $("#volume-3").val(slideEvt.value);
