@@ -123,6 +123,7 @@
 
         }
         .input{
+            display:none;
 
         }
         .soundeffect{
@@ -149,6 +150,7 @@
             $('.ipsetting').css("display", "none");
             $('.systemfunction').css("display","none");
             $('.firmware').css("display","none");
+            $('.input').css("display","none");
 
             $('#admin-login').removeClass('active');
             $('#registration').removeClass('active');
@@ -180,14 +182,12 @@
         }
         function systemfunction(){
             hideAll();
-            //TODO
             $('.systemfunction').css("display","block");
             $('#systemfunction').addClass('active');
         }
         function input(){
             hideAll();
-            //TODO
-
+            $('.input').css("display","block");
             $('#input').addClass('active');
         }
         function soundeffect(){
@@ -236,7 +236,7 @@
                     <!--Admin Login-->
                     <div class="row">
                         <div class="col-md-5 admin-login">
-                            <div class="text-center" id="header"><p>Access accepted</p></div>
+                            <div class="text-center" id="header">Access accepted</div>
                         </div>
                         <div class="col-md-7 admin-login"></div>
                     </div>
@@ -607,13 +607,39 @@
                         <div class="col-md-4"></div>
                     </div>
                     <div class="row input">
-                        <div class="col-md-4 text-center" id="header" style="margin:0 0.5em">
-                            <div class="col-md-6"><h3><b>1. Left-CH</b></h3></div>
-                            <div class="col-md-6"><h3><b>2. Filler-Content</b></h3></div>
+                        <div class="col-md-4" id="header" style="margin:0 0.5em; display:flex;">
+                            
+                            <span style="width:50%"><h4><b>1.Left-CH</b></h4></span>
+                            <span style="width:50%"><h4><b>2.Filler Content</b></h4></span>
                         </div>
-                        <div class="col-md-4 text-center" id="header" style="margin:0 0.5em"></div>
+                        <div class="col-md-4" id="header" style="margin:0 0.5em">
+                            <h4><b>3.Right-Ch</b><b style="margin-left: 25%">4.Filler Content</b></h4>
+                            
+                        </div>
+                        <div class="col-md-3 text-center" id="header" style="margin:0 0.5em">
+                            <h4><b>5.</b></h4>
+                        </div>
                     </div>
-                    <div class="row input"></div>
+                    <div class="row input">
+                        <div class="col-md-4 black text-center" style="margin:0 0.5em">
+                            <ul>
+                                <li><h2><b>Left-in</b></h2></li>
+                                <li><span><input type="checkbox"><b>RCA CH1/CH2 </b> <input type="checkbox"><b>Optical</b></span></li>
+                                <li><span><input type="checkbox"><b>RCA CH3/CH4 </b><input type="checkbox"><b>D-Bay</b></span></li>
+                                
+
+                            </ul>
+                        </div>
+                        <div class="col-md-4 text-center black" style="margin:0 0.5em">
+                            <ul>
+                                <li><h2><b>Right-in</b></h2></li>
+                                <li><span><input type="checkbox"><b>RCA CH1/CH2 </b> <input type="checkbox"><b>Optical</b></span></li>
+                                <li><span><input type="checkbox"><b>RCA CH3/CH4 </b><input type="checkbox"><b>D-Bay</b></span></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <span><input type="checkbox">RCA CH1/CH2 <input type="checkbox" value="RCA CH3 CH4">RCA CH3/CH4</span>
                     <!--Sound Effect-->
                     <!--Firmware-->
                     <div class="row firmware">
@@ -632,7 +658,6 @@
                                     <li id="white" style="margin-top:4em;">Latest</li>
                                     <li id="white">V1.3 build 271003</li>
                                     <li><input style="background-color:black; color:white; margin: 1em 0 3em;" type="button" class="btn btn-default" value="Upgrade"></li>
-
                                 </ul>
                             </div>
                             <div class="col-md-6 grey">
