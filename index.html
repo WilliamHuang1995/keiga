@@ -247,11 +247,13 @@
                     <!--System Function-->
                     <div class="row">
 
-                        <div id="header" class="col-md-8 systemfunction"><div><h4  class="text-center">Channel balance</h4></div></div>
+                        <div class="col-md-12">
+                            <div id="header" class="col-md-8 systemfunction"><div><h4  class="text-center">Channel balance</h4></div></div>
+                        </div>
 
                     </div>
                     <div class="row systemfunction">
-                        <div style="display:flex">
+                        <div class="col-md-12" style="display:flex">
                             <div class="col-md-2 black" > 
                                 <ul class="text-center">
                                     <li><h4><b>Line1</b></h4></li>
@@ -323,7 +325,7 @@
                     </div>
                     <div class="row systemfunction">
 
-                        <div style="display:flex">
+                        <div class="col-md-12" style="display:flex">
                             <div class="col-md-2 grey" style="flex:1">
                                 <ul class="text-center">
                                     <li><h4><b>Line3</b></h4></li>
@@ -401,65 +403,66 @@
 
                     <div class="row input">
 
-                        <div class="col-md-4 customgrey" style="border-right-style:inset; border-right-width:medium"><div class="text-center">ZONE 1</div>
-                            <div class="row">
-                                <div class="col-md-12" id="header" style="display:flex;">
+                        <div class="col-md-12">
+                            <div class="col-md-4 customgrey" style="border-right-style:inset; border-right-width:medium"><div class="text-center">ZONE 1</div>
+                                <div class="row">
+                                    <div class="col-md-12" id="header" style="display:flex;">
 
-                                    <span class="white" style="width:5%"><h4>1.</h4></span>
-                                    <span class="white" style="width:45%"><h4 id="input1"></h4></span>
-                                    <span class="white" style="width:5%"><h4>2.</h4></span>
-                                    <span class="white" style="width:45%"><h4 id="input2"></h4></span>
+                                        <span class="white" style="width:5%"><h4>1.</h4></span>
+                                        <span class="white" style="width:45%"><h4 id="input1"></h4></span>
+                                        <span class="white" style="width:5%"><h4>2.</h4></span>
+                                        <span class="white" style="width:45%"><h4 id="input2"></h4></span>
+                                    </div>
+                                </div>
+                                <div class="row black">
+                                    <ul>
+                                        <li class="text-center white"><h2>Left-in</h2></li>
+
+                                        <div class="input-channel white"><span class="white" style="width:50%"><input type="checkbox">RCA CH1/CH2</span>
+                                            <span style="width:50%"><input type="checkbox">Optical</span></div>
+                                        <div class="input-channel white"><span class="white" style="width:50%"><input type="checkbox">RCA CH3/CH4</span>
+                                            <span style="width:50%"><input type="checkbox">D-Bay</span></div>
+
+
+
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="row black">
-                                <ul>
-                                    <li class="text-center white"><h2>Left-in</h2></li>
-
-                                    <div class="input-channel white"><span class="white" style="width:50%"><input type="checkbox">RCA CH1/CH2</span>
-                                        <span style="width:50%"><input type="checkbox">Optical</span></div>
-                                    <div class="input-channel white"><span class="white" style="width:50%"><input type="checkbox">RCA CH3/CH4</span>
-                                        <span style="width:50%"><input type="checkbox">D-Bay</span></div>
 
 
+                            <div class="col-md-4 customgrey" style="border-right-style: inset; border-right-width:medium"><div class="text-center">ZONE 2</div>
+                                <div class="row">
+                                    <div class="col-md-12" id="header" style="display:flex;">
 
-                                </ul>
-                            </div>
-                        </div>
+                                        <span class="white" style="width:5%"><h4>3.</h4></span>
+                                        <span class="white" style="width:45%"><h4 id="input3"></h4></span>
+                                        <span class="white" style="width:5%"><h4>4.</h4></span>
+                                        <span class="white" style="width:45%"><h4 id="input4"></h4></span>
+                                    </div>
+                                </div>
+                                <div class="row black">
+                                    <ul>
+                                        <li class="text-center white"><h2>Right-in</h2></li>
+
+                                        <div class="input-channel white" ><span style="width:50%"><input type="checkbox">RCA CH1/CH2</span>
+                                            <span style="width:50%"><input class="white" type="checkbox">Optical</span></div>
+                                        <div class="input-channel white"><span style="width:50%"><input type="checkbox">RCA CH3/CH4</span>
+                                            <span style="width:50%"><input class="white" type="checkbox">D-Bay</span></div>
 
 
-                        <div class="col-md-4 customgrey" style="border-right-style: inset; border-right-width:medium"><div class="text-center">ZONE 2</div>
-                            <div class="row">
-                                <div class="col-md-12" id="header" style="display:flex;">
 
-                                    <span class="white" style="width:5%"><h4>3.</h4></span>
-                                    <span class="white" style="width:45%"><h4 id="input3"></h4></span>
-                                    <span class="white" style="width:5%"><h4>4.</h4></span>
-                                    <span class="white" style="width:45%"><h4 id="input4"></h4></span>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="row black">
-                                <ul>
-                                    <li class="text-center white"><h2>Right-in</h2></li>
+                            <div class="col-md-4" style="border-right-style: inset; border-right-width:1em"><div class="text-center" style="visibility: hidden">ZONE 3xd</div>
+                                <div class="row">
+                                    <div class="col-md-12" id="header" style="display:flex;">
 
-                                    <div class="input-channel white" ><span style="width:50%"><input type="checkbox">RCA CH1/CH2</span>
-                                        <span style="width:50%"><input class="white" type="checkbox">Optical</span></div>
-                                    <div class="input-channel white"><span style="width:50%"><input type="checkbox">RCA CH3/CH4</span>
-                                        <span style="width:50%"><input class="white" type="checkbox">D-Bay</span></div>
-
-
-
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-4" style="border-right-style: inset; border-right-width:1em"><div class="text-center" style="visibility: hidden">ZONE 3xd</div>
-                            <div class="row">
-                                <div class="col-md-12" id="header" style="display:flex;">
-
-                                    <span class="white" style="width:5%"><h4>5.</h4></span>
-                                    <span class="white" style="width:95%"><h4 id="input5"></h4></span>
+                                        <span class="white" style="width:5%"><h4>5.</h4></span>
+                                        <span class="white" style="width:95%"><h4 id="input5"></h4></span>
+                                    </div>
                                 </div>
-                            </div>
-                            <!--
+                                <!--
 <div class="row black">
 <ul>
 <li class="text-center white"><h2>Right-in</h2></li>
@@ -474,6 +477,7 @@
 </ul>
 </div>
 -->
+                            </div>
                         </div>
 
 
@@ -484,44 +488,46 @@
                     <!--Sound Effect-->
                     <div class="row soundeffect">
 
-                        <div class="col-md-4" style="border-right-style:inset; border-right-width:medium">
-                            <div class="row">
-                                <div class="col-md-12" id="header" style="display:flex;">
-                                    <span class="white" style="width:5%"><h4>1.</h4></span>
-                                    <span class="white" style="width:45%"><h4 id="se1"></h4></span>
-                                    <span class="white" style="width:5%"><h4>2.</h4></span>
-                                    <span class="white" style="width:45%"><h4 id="se2"></h4></span>
+                        <div class="col-md-12">
+                            <div class="col-md-4" style="border-right-style:inset; border-right-width:medium">
+                                <div class="row">
+                                    <div class="col-md-12" id="header" style="display:flex;">
+                                        <span class="white" style="width:5%"><h4>1.</h4></span>
+                                        <span class="white" style="width:45%"><h4 id="se1"></h4></span>
+                                        <span class="white" style="width:5%"><h4>2.</h4></span>
+                                        <span class="white" style="width:45%"><h4 id="se2"></h4></span>
+                                    </div>
+                                </div>
+                                <div class="row black">
+
                                 </div>
                             </div>
-                            <div class="row black">
-                                
-                            </div>
-                        </div>
 
 
-                        <div class="col-md-4" style="border-right-style: inset; border-right-width:medium">
-                            <div class="row">
-                                <div class="col-md-12" id="header" style="display:flex;">
-                                    <span class="white" style="width:5%"><h4>3.</h4></span>
-                                    <span class="white" style="width:45%"><h4 id="se3"></h4></span>
-                                    <span class="white" style="width:5%"><h4>4.</h4></span>
-                                    <span class="white" style="width:45%"><h4 id="se4"></h4></span>
+                            <div class="col-md-4" style="border-right-style: inset; border-right-width:medium">
+                                <div class="row">
+                                    <div class="col-md-12" id="header" style="display:flex;">
+                                        <span class="white" style="width:5%"><h4>3.</h4></span>
+                                        <span class="white" style="width:45%"><h4 id="se3"></h4></span>
+                                        <span class="white" style="width:5%"><h4>4.</h4></span>
+                                        <span class="white" style="width:45%"><h4 id="se4"></h4></span>
+                                    </div>
+
                                 </div>
-                                
-                            </div>
-                            <div class="row black">
-                                
-                            </div>
-                        </div>
-                        <div class="col-md-4" style="border-right-style: inset; border-right-width:1em">
-                            <div class="row">
-                                <div class="col-md-12" id="header" style="display:flex;">
+                                <div class="row black">
 
-                                    <span class="white" style="width:5%"><h4>5.</h4></span>
-                                    <span class="white" style="width:95%"><h4 id="se5"></h4></span>
                                 </div>
                             </div>
-                            
+                            <div class="col-md-4" style="border-right-style: inset; border-right-width:1em">
+                                <div class="row">
+                                    <div class="col-md-12" id="header" style="display:flex;">
+
+                                        <span class="white" style="width:5%"><h4>5.</h4></span>
+                                        <span class="white" style="width:95%"><h4 id="se5"></h4></span>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
 
 
