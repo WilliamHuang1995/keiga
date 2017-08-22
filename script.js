@@ -189,3 +189,14 @@ $("#dbayl").on("slide", function(slideEvt) {
 $("#dbayr").on("slide", function(slideEvt) {
     $("#volume-10").val(slideEvt.value);
 });
+
+
+$(window).bind("resize",function(){
+    console.log($(this).width())
+    if($(this).width() <500){
+        $("div.col-md-2.grey").css('display','block')
+    }
+    else{
+        $("div.col-md-2.grey").css('display','flex')
+    }
+})

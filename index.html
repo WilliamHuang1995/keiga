@@ -1,13 +1,13 @@
 <HEAD>
     <title>Keiga Electronic Inc.</title>
-<!--
-  <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-   <link rel="stylesheet" type="text/css" href="bootstrap-slider.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="jquery.js"></script>   
-  <script type="text/javascript" src="bootstrap.min.js"></script>
-  <script type="text/javascript" src="bootstrap-slider.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
+    <!--
+<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="bootstrap-slider.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="jquery.js"></script>   
+<script type="text/javascript" src="bootstrap.min.js"></script>
+<script type="text/javascript" src="bootstrap-slider.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
 -->
     <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="bootstrap-slider.min.js"></script>
@@ -190,8 +190,8 @@
                         </div>
                     </div>
                     <div class="row ipsetting">
-                        <div class="col-md-12">
-                            <div class="col-md-2 black"> 
+                        <div class="col-md-12" style="display:flex">
+                            <div class="col-md-2 black" style="flex:1"> 
                                 <ul class="text-center">
                                     <li><b>IP number</b></li>
                                     <li><input type="number" id="ip-field" min="0" max="255"></li>
@@ -200,7 +200,7 @@
                                     <li><input type="number" id="ip-field" min="0" max="255"></li>
                                 </ul>
                             </div>
-                            <div class="col-md-2 grey">
+                            <div class="col-md-2 grey" style="flex:1">
                                 <ul class="text-center">
                                     <li><b>Subnet</b></li>
                                     <li><input type="number" id="ip-field" min="0" max="255"></li>
@@ -209,7 +209,7 @@
                                     <li><input type="number" id="ip-field" min="0" max="255"></li>
                                 </ul>
                             </div>
-                            <div class="col-md-2 black">
+                            <div class="col-md-2 black" style="flex:1">
                                 <ul class="text-center">
                                     <li><b>Gateway</b></li>
                                     <li><input type="number" id="ip-field" min="0" max="255"></li>
@@ -218,7 +218,7 @@
                                     <li><input type="number" id="ip-field" min="0" max="255"></li>
                                 </ul>
                             </div>
-                            <div class="col-md-2 grey">
+                            <div class="col-md-2 grey" style="flex:1">
                                 <ul class="text-center">
                                     <li><b>DNS1</b></li>
                                     <li><input type="number" id="ip-field" min="0" max="255"></li>
@@ -227,7 +227,7 @@
                                     <li><input type="number" id="ip-field" min="0" max="255"></li>
                                 </ul>
                             </div>
-                            <div class="col-md-2 black">
+                            <div class="col-md-2 black" style="flex:1">
                                 <ul class="text-center">
                                     <li><b>DNS2</b></li>
                                     <li><input type="number" id="ip-field" min="0" max="255"></li>
@@ -236,16 +236,13 @@
                                     <li><input type="number" id="ip-field" min="0" max="255"></li>
                                 </ul>
                             </div>
-                            <div class="col-md-2 grey">
-                                <ul class="text-center">
-                                    <li>
-                                        <h4 style="color:white; margin-top:2em">Fixed IP</h4><input type="checkbox" style="color: red">
-                                    </li>
-                                    <li>
-                                        <h4 style="color:white; margin-top:2em">DHCP mode</h4> <input type="checkbox">
-                                    </li>
-                                    <li><input type="submit" value="Submit" style="margin-top:2em"></li>
-                                </ul>
+                            <div class="col-md-2 grey" style="flex:1">
+
+
+                                <div class="text-right" style="right:50%"><span><label class="white">Fixed IP</label><input type="checkbox" style="color: red"></span></div>
+                                <div class="text-right" style="right:50%"><span><label class="white">DHCP mode</label><input type="checkbox" style="color: red"></span></div>
+                                <div class="text-center"><input type="submit" value="Submit"></div>
+
                             </div>
                         </div>
                     </div>
@@ -413,7 +410,7 @@
 
                     <!--Input-->
                     <div class="row input">
-                        
+
                         <div class="col-md-4 customgrey" style="margin:0 0.5em;"><div class="text-center">ZONE 1</div>
                             <div class="row">
                                 <div class="col-md-12" id="header" style="display:flex;">
@@ -462,7 +459,7 @@
                         </div>
 
 
-                        
+
                     </div>
                     <!--Sound Effect-->
                     <!--Firmware-->
