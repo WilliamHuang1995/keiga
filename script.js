@@ -6,6 +6,7 @@ function hideAll(){
     $('.systemfunction').css("display","none");
     $('.firmware').css("display","none");
     $('.input').css("display","none");
+    $('.soundeffect').css("display","none");
 
     $('#admin-login').removeClass('active');
     $('#registration').removeClass('active');
