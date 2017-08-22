@@ -1,0 +1,152 @@
+body{
+    background-color:#F2F2F2;
+}
+
+.logo{
+    left:25%;
+    position:relative; 
+    width:8em; 
+    height:4em
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /*width: 200px;*/
+
+}
+ul.sidebar{
+    background-color: white;
+    /*margin-left:5em;*/
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: #000;
+    border-bottom: 2px solid;
+    border-bottom-color: red;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: grey;
+    color: white;
+}
+
+#main-header{
+    border-bottom: 5px solid; 
+    border-bottom-color: red; 
+    background-color: black; 
+    color:white; 
+    height:3em;
+}
+#header{
+    border-bottom: 2px solid; 
+    border-bottom-color: red; 
+    background-color: black; 
+    color:white; 
+    height:3em;
+}
+
+.navbar-header{
+    color: white;
+    font-size: 30px;
+}
+.black{
+    background-color: #262626;
+
+}
+.black-font{
+    color: black;
+}
+.customgrey{
+    background-color: #B2B2B2;
+}
+.grey{
+    background-color: #595959;
+
+}
+.white{
+    color:white;
+}
+#white{
+    color:white;
+}
+textarea{
+    resize:none;
+}
+#admin-field{
+    margin:15px 0px;
+    width:80%;
+    text-align: center;
+}
+#regist-field{
+    margin:0px 0px 15px;
+}
+#ip-field{
+    margin:15px 0px;
+    width:60%;
+    text-align: center;
+}
+b{
+    color:white;
+}
+#percentage{
+    color:darkgrey;
+}
+input#volume-1, #volume-2, #volume-3, #volume-4, #volume-5, #volume-6, #volume-7, #volume-8, #volume-9,#volume-10 {
+    color:black;
+    width: 30%;
+    margin:0 1em;
+}
+
+/*selects all volume buttons*/
+[id^=volume]{
+    color:white;
+    margin: 1em;
+}
+#shade .slider-selection {
+    background: darkgrey;
+}
+
+/*
+* Hidden Divs
+*/
+.admin-login{
+    display:non;
+}
+.admin-change{
+    display:none;
+}
+.registration{
+    display:none;
+
+}
+.ipsetting{
+    display:none;
+
+}
+
+.systemfunction{
+    display:none;    
+
+}
+.input{
+    display:none;
+
+}
+.soundeffect{
+    display:none;
+
+}
+.firmware{
+    display:none;
+}
+
