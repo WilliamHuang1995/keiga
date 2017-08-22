@@ -9,6 +9,10 @@
     height:4em
 }
 
+.input-channel{
+    display:flex;
+    margin-left: 2em;
+}
 ul {
     list-style-type: none;
     margin: 0;
