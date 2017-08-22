@@ -7,7 +7,7 @@
     position:relative; 
     width:8em; 
     height:4em
-}
+}   
 
 .input-channel{
     display:flex;
@@ -99,6 +99,11 @@ textarea{
     width:60%;
     text-align: center;
 }
+#ip-submit{
+    width: 6em;  
+    height: 3em;
+}
+
 b{
     color:white;
 }

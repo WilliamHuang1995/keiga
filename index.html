@@ -63,7 +63,7 @@
                                 <ul class="text-center">
                                     <li><b>Account</b></li>
                                     <li><input type="text" id="admin-field"></li>
-                                    <li ><a href="#" onclick=adminchange() id="white">change account/password?</a></li>
+                                    <li ><a href="#" onclick=adminchange() id="white" style="word-break: break-word;">change account/password?</a></li>
                                 </ul>    
                             </div>
                             <div class="col-md-4 black">
@@ -194,54 +194,52 @@
                             <div class="col-md-2 black" style="flex:1"> 
                                 <ul class="text-center">
                                     <li><b>IP number</b></li>
-                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
-                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
-                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
-                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3"></li>
                                 </ul>
                             </div>
                             <div class="col-md-2 grey" style="flex:1">
                                 <ul class="text-center">
                                     <li><b>Subnet</b></li>
-                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
-                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
-                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
-                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3"></li>
                                 </ul>
                             </div>
                             <div class="col-md-2 black" style="flex:1">
                                 <ul class="text-center">
                                     <li><b>Gateway</b></li>
-                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
-                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
-                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
-                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3"></li>
                                 </ul>
                             </div>
                             <div class="col-md-2 grey" style="flex:1">
                                 <ul class="text-center">
                                     <li><b>DNS1</b></li>
-                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
-                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
-                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
-                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3"></li>
                                 </ul>
                             </div>
                             <div class="col-md-2 black" style="flex:1">
                                 <ul class="text-center">
                                     <li><b>DNS2</b></li>
-                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
-                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
-                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
-                                    <li><input type="number" id="ip-field" min="0" max="255"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3"></li>
+                                    <li><input type="number" id="ip-field" min="0" max="255" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3"></li>
                                 </ul>
                             </div>
-                            <div class="col-md-2 grey" style="flex:1">
-
-
-                                <div class="text-right" style="right:50%"><span><label class="white">Fixed IP</label><input type="checkbox" style="color: red"></span></div>
-                                <div class="text-right" style="right:50%"><span><label class="white">DHCP mode</label><input type="checkbox" style="color: red"></span></div>
-                                <div class="text-center"><input type="submit" value="Submit"></div>
+                            <div class="col-md-2 grey text-center" style="flex:1">
+                                <div class="white" style="margin: 3em 0">Fixed IP <input type="checkbox"></div>
+                                <div class="white" style="margin: 3em 0">DHCP mode <input type="checkbox"></div>
+                                <div class="text-center"><input class="white black" type="submit" id="ip-submit" value="Submit"></div>
 
                             </div>
                         </div>
@@ -409,24 +407,32 @@
 
 
                     <!--Input-->
+                    
+                    <!--
+                    to set the input value run 
+                    $('#input1').text("value")
+                    max length is 17
+                    -->
                     <div class="row input">
 
                         <div class="col-md-4 customgrey" style="margin:0 0.5em;"><div class="text-center">ZONE 1</div>
                             <div class="row">
                                 <div class="col-md-12" id="header" style="display:flex;">
 
-                                    <span style="width:50%"><h4><b>1.Left-CH</b></h4></span>
-                                    <span style="width:50%"><h4><b>2.Filler Content</b></h4></span>
+                                    <span class="white" style="width:5%"><h4>1.</h4></span>
+                                    <span class="white" style="width:45%"><h4 id="input1"></h4></span>
+                                    <span class="white" style="width:5%"><h4>2.</h4></span>
+                                    <span class="white" style="width:45%"><h4 id="input2"></h4></span>
                                 </div>
                             </div>
                             <div class="row black">
                                 <ul>
-                                    <li class="text-center"><h2><b>Left-in</b></h2></li>
+                                    <li class="text-center white"><h2>Left-in</h2></li>
 
-                                    <div class="input-channel"><span style="width:50%"><input type="checkbox"><b>RCA CH1/CH2</b></span>
-                                        <span style="width:50%"><input type="checkbox"><b>Optical</b></span></div>
-                                    <div class="input-channel"><span style="width:50%"><input type="checkbox"><b>RCA CH3/CH4</b></span>
-                                        <span style="width:50%"><input type="checkbox"><b>D-Bay</b></span></div>
+                                    <div class="input-channel white"><span class="white" style="width:50%"><input type="checkbox">RCA CH1/CH2</span>
+                                        <span style="width:50%"><input type="checkbox">Optical</span></div>
+                                    <div class="input-channel white"><span class="white" style="width:50%"><input type="checkbox">RCA CH3/CH4</span>
+                                        <span style="width:50%"><input type="checkbox">D-Bay</span></div>
 
 
 
@@ -439,18 +445,20 @@
                             <div class="row">
                                 <div class="col-md-12" id="header" style="display:flex;">
 
-                                    <span style="width:50%"><h4><b>3.Right-CH</b></h4></span>
-                                    <span style="width:50%"><h4><b>4.Filler Content</b></h4></span>
+                                    <span class="white" style="width:5%"><h4>3.</h4></span>
+                                    <span class="white" style="width:45%"><h4 id="input3"></h4></span>
+                                    <span class="white" style="width:5%"><h4>4.</h4></span>
+                                    <span class="white" style="width:45%"><h4 id="input4"></h4></span>
                                 </div>
                             </div>
                             <div class="row black">
                                 <ul>
-                                    <li class="text-center"><h2><b>Right-in</b></h2></li>
+                                    <li class="text-center white"><h2>Right-in</h2></li>
 
-                                    <div class="input-channel" ><span style="width:50%"><input type="checkbox"><b>RCA CH1/CH2</b></span>
-                                        <span style="width:50%"><input type="checkbox"><b>Optical</b></span></div>
-                                    <div class="input-channel"><span style="width:50%"><input type="checkbox"><b>RCA CH3/CH4</b></span>
-                                        <span style="width:50%"><input type="checkbox"><b>D-Bay</b></span></div>
+                                    <div class="input-channel white" ><span style="width:50%"><input type="checkbox">RCA CH1/CH2</span>
+                                        <span style="width:50%"><input class="white" type="checkbox">Optical</span></div>
+                                    <div class="input-channel white"><span style="width:50%"><input type="checkbox">RCA CH3/CH4</span>
+                                        <span style="width:50%"><input class="white" type="checkbox">D-Bay</span></div>
 
 
 
