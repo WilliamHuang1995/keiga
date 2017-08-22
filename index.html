@@ -11,7 +11,6 @@
         }
         ul.sidebar{
             background-color: white;
-            margin-left:5em;
         }
 
         li a {
@@ -576,8 +575,8 @@
                                         <li><h4><b>Audio trigger</b></h4></li>
                                         <li><h4 id="white">Engagement</h4></li>
                                         <li><input type="checkbox"><p id="white">On</p></li>
-                                        <li><input type="checkbox"><p id="white"> Off</p></li>
-                                        <li><input type="checkbox"><p id="white"> Auto</p></li>
+                                        <li><input type="checkbox"><p id="white">Off</p></li>
+                                        <li><input type="checkbox"><p id="white">Auto</p></li>
                                         <li><h4 id="white">Delay to Off</h4></li>
                                         <li><span><select>
                                             <option value="0">0</option>
@@ -602,51 +601,57 @@
 
                     <!--Input-->
                     <div class="row input">
-                        <div class="col-md-4 text-center" style="background-color:#b2b2b2; height:2em; margin:0 0.5em;" ><h4>ZONE 1</h4></div>
-                        <div class="col-md-4 text-center" style="background-color:#b2b2b2; height:2em; margin:0 0.5em;"><h4>ZONE 2</h4></div>
-                        <div class="col-md-4"></div>
+                        
+                        <div class="col-md-4 text-center customgrey" style="margin:0 0.5em;" >ZONE 1
+                            <div class="row">
+                                <div class="col-md-12" id="header" style="display:flex;">
+
+                                    <span style="width:50%"><h4><b>1.Left-CH</b></h4></span>
+                                    <span style="width:50%"><h4><b>2.Filler Content</b></h4></span>
+                                </div>
+                            </div>
+                            <div class="row black">
+                                <ul>
+                                    <li class="text-center"><h2><b>Left-in</b></h2></li>
+
+                                    <div style="display:flex;"><span style="width:50%"><input type="checkbox"><b>RCA CH1/CH2</b></span>
+                                        <span style="width:50%"><input type="checkbox"><b>Optical</b></span></div>
+                                    <div style="display:flex;"><span style="width:50%"><input type="checkbox"><b>RCA CH3/CH4</b></span>
+                                        <span style="width:50%"><input type="checkbox"><b>D-Bay</b></span></div>
+
+
+
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-4 text-center" style="background-color:#b2b2b2; ; margin:0 0.5em;">ZONE 2
+                            <div class="row">
+                                <div class="col-md-12" id="header" style="display:flex;">
+
+                                    <span style="width:50%"><h4><b>3.Right-CH</b></h4></span>
+                                    <span style="width:50%"><h4><b>4.Filler Content</b></h4></span>
+                                </div>
+                            </div>
+                            <div class="row black">
+                                <ul>
+                                    <li class="text-center"><h2><b>Right-in</b></h2></li>
+
+                                    <div style="display:flex;"><span style="width:50%"><input type="checkbox"><b>RCA CH1/CH2</b></span>
+                                        <span style="width:50%"><input type="checkbox"><b>Optical</b></span></div>
+                                    <div style="display:flex;"><span style="width:50%"><input type="checkbox"><b>RCA CH3/CH4</b></span>
+                                        <span style="width:50%"><input type="checkbox"><b>D-Bay</b></span></div>
+
+
+
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        
                     </div>
-                    <div class="row input">
-                        <div class="col-md-4" id="header" style="margin:0 0.5em; display:flex;">
-
-                            <span style="width:50%"><h4><b>1.Left-CH</b></h4></span>
-                            <span style="width:50%"><h4><b>2.Filler Content</b></h4></span>
-                        </div>
-                        <div class="col-md-4" id="header" style="margin:0 0.5em; display:flex;">
-                            <span style="width:50%"><h4><b>3.Right-CH</b></h4></span>
-                            <span style="width:50%"><h4><b>4.Filler Content</b></h4></span>
-
-                        </div>
-                        <div class="col-md-3 text-center" id="header" style="margin:0 0.5em">
-                            <h4><b>5.</b></h4>
-                        </div>
-                    </div>
-                    <div class="row input">
-                        <div class="col-md-4 black" style="margin:0 0.5em">
-                            <ul>
-                                <li class="text-center"><h2><b>Left-in</b></h2></li>
-
-                                <div style="display:flex;"><span style="width:50%"><input type="checkbox"><b>RCA CH1/CH2</b></span>
-                                    <span style="width:50%"><input type="checkbox"><b>Optical</b></span></div>
-                                <div style="display:flex;"><span style="width:50%"><input type="checkbox"><b>RCA CH3/CH4</b></span>
-                                    <span style="width:50%"><input type="checkbox"><b>D-Bay</b></span></div>
-                                
-
-
-                            </ul>
-                        </div>
-                        <div class="col-md-4 black" style="margin:0 0.5em">
-                            <ul>
-                                <li class="text-center"><h2><b>Right-in</b></h2></li>
-                                <div style="display:flex;"><span style="width:50%"><input type="checkbox"><b>RCA CH1/CH2</b></span>
-                                    <span style="width:50%"><input type="checkbox"><b>Optical</b></span></div>
-                                <div style="display:flex;"><span style="width:50%"><input type="checkbox"><b>RCA CH3/CH4</b></span>
-                                    <span style="width:50%"><input type="checkbox"><b>D-Bay</b></span></div>
-
-                            </ul>
-                        </div>
-                    </div>
-                    <span><input type="checkbox">RCA CH1/CH2 <input type="checkbox" value="RCA CH3 CH4">RCA CH3/CH4</span>
                     <!--Sound Effect-->
                     <!--Firmware-->
                     <div class="row firmware">
