@@ -4,7 +4,7 @@
     <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="bootstrap-slider.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
-    <link rel="stylesheet" type="text/css" href=style.css>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="bootstrap-slider.min.css">
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
     <script type="text/javascript" src="bootstrap.min.js"></script>
@@ -12,12 +12,12 @@
 </HEAD>
 <html>
     <!--div class="container"-->
-    <body style="background-color:#F2F2F2;">
+    <body class="body">
         <div class="text-center">AMOR Web 12:35PM, JULY-28-2017</div>
         <div class="container-fluid">
 
             <div class="row"> 
-                <div class="col-md-2"> <img src="keiga.png" style="left:25%;position:relative; width:50%; height:4em"></div>
+                <div class="col-md-2"> <img class="logo" src="keiga.png"></div>
                 <div class="col-md-10 "> 
                     <div id="main-header" >M4-2.0</div>
                 </div>
@@ -56,14 +56,14 @@
                                 <ul class="text-center">
                                     <li><b>Account</b></li>
                                     <li><input type="text" id="admin-field"></li>
-                                    <li ><a href="#" onclick=adminchange() style="color:white;">change account/password?</a></li>
+                                    <li ><a href="#" onclick=adminchange() id="white">change account/password?</a></li>
                                 </ul>    
                             </div>
                             <div class="col-md-4 black">
                                 <ul class="text-center">
                                     <li><b>Password</b></li>
                                     <li><input type="password" id="admin-field"></li>
-                                    <li><input type="submit" style="color:black" value="Enter"></li>
+                                    <li><input type="submit" class="black-font" value="Enter"></li>
                                 </ul>
                             </div>
                         </div>
@@ -394,7 +394,7 @@
 
                                     </ul>
                                 </div>
-                                <div class="col-md-6" style="background-color:#B2B2B2;"> 
+                                <div class="col-md-6 customgrey"> 
                                 </div>
 
                             </div>
@@ -431,7 +431,7 @@
                         </div>
 
 
-                        <div class="col-md-4 text-center" style="background-color:#b2b2b2; ; margin:0 0.5em;">ZONE 2
+                        <div class="col-md-4 text-center customgrey" style="margin:0 0.5em;">ZONE 2
                             <div class="row">
                                 <div class="col-md-12" id="header" style="display:flex;">
 
