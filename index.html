@@ -246,160 +246,150 @@
                     </div>
                     <!--System Function-->
                     <div class="row">
-                        <div class="col-md-8 systemfunction">
-                            <div id="header" class="text-center" ><h4><b >Channel balance</b></h4></div>
-                        </div>
+
+                        <div id="header" class="col-md-8 systemfunction"><div><h4  class="text-center">Channel balance</h4></div></div>
+
                     </div>
                     <div class="row systemfunction">
-                        <div>
-                            <div class="col-md-8">
-                                <div class="col-md-3 black"> 
-                                    <ul class="text-center">
-                                        <li><h4><b>Line1</b></h4></li>
-                                        <li id="percentage">100%</li>
-                                        <input id="line1" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
-                                        <li id="percentage">0</li>
-                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown1'></span>
-                                            <input id="volume-1" type="text" readonly> 
-                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp1'></span></li>
+                        <div style="display:flex">
+                            <div class="col-md-2 black" style="flex:1"> 
+                                <ul class="text-center">
+                                    <li><h4><b>Line1</b></h4></li>
+                                    <li id="percentage">100%</li>
+                                    <input id="line1" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
+                                    <li id="percentage">0</li>
+                                    <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown1'></span>
+                                        <input id="volume-1" type="text" readonly> 
+                                        <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp1'></span></li>
 
-                                    </ul>
-                                </div>
-
-
-                                <div class="col-md-3 grey">
-                                    <ul class="text-center">
-                                        <li><h4><b>Line2</b></h4></li>
-                                        <li id="percentage">100%</li>
-                                        <input id="line2" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
-                                        <li id="percentage">0</li>
-                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown2'></span>
-                                            <input id="volume-2" type="text" readonly> 
-                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp2'></span></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-3 black"> 
-                                    <ul class="text-center">
-                                        <li><h4><b>Optical L</b></h4></li>
-                                        <li id="percentage">100%</li>
-                                        <input id="opticall" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
-                                        <li id="percentage">0</li>
-                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown3'></span>
-                                            <input id="volume-3" type="text" readonly> 
-                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp3'></span></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-3 grey">
-                                    <ul class="text-center">
-                                        <li><h4><b>Optical R</b></h4></li>
-                                        <li id="percentage">100%</li>
-                                        <input id="opticalr" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
-                                        <li id="percentage">0</li>
-                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown4'></span>
-                                            <input id="volume-4" type="text" readonly> 
-                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp4'></span></li>
-                                    </ul>
-                                </div>
+                                </ul>
                             </div>
-                            <div class="col-md-4"> 
-                                <div class="col-md-6 black"> 
-                                    <ul class="text-center">
-                                        <li><h4><b>Master volume</b></h4></li>
-                                        <li id="percentage">100%</li>
-                                        <input id="mastervolume" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
-                                        <li id="percentage">0</li>
-                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown5'></span>
-                                            <input id="volume-5" type="text" readonly> 
-                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp5'></span></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-6 grey">
-                                    <ul class="text-center">
-                                        <li><h4><b>Limitation</b></h4></li>
-                                        <li id="percentage">100%</li>
-                                        <input id="limitation" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
-                                        <li id="percentage">0</li>
-                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown6'></span>
-                                            <input id="volume-6" type="text" readonly> 
-                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp6'></span></li>
-                                    </ul>
-                                </div>
+                            <div class="col-md-2 grey" style="flex:1">
+                                <ul class="text-center">
+                                    <li><h4><b>Line2</b></h4></li>
+                                    <li id="percentage">100%</li>
+                                    <input id="line2" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
+                                    <li id="percentage">0</li>
+                                    <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown2'></span>
+                                        <input id="volume-2" type="text" readonly> 
+                                        <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp2'></span></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-2 black" style="flex:1"> 
+                                <ul class="text-center">
+                                    <li><h4><b>Optical L</b></h4></li>
+                                    <li id="percentage">100%</li>
+                                    <input id="opticall" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
+                                    <li id="percentage">0</li>
+                                    <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown3'></span>
+                                        <input id="volume-3" type="text" readonly> 
+                                        <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp3'></span></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-2 grey" style="flex:1">
+                                <ul class="text-center">
+                                    <li><h4><b>Optical R</b></h4></li>
+                                    <li id="percentage">100%</li>
+                                    <input id="opticalr" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
+                                    <li id="percentage">0</li>
+                                    <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown4'></span>
+                                        <input id="volume-4" type="text" readonly> 
+                                        <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp4'></span></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-2 black" style="border-left-style: inset; border-left-width:medium; flex:1"> 
+                                <ul class="text-center">
+                                    <li><h4><b>Master volume</b></h4></li>
+                                    <li id="percentage">100%</li>
+                                    <input id="mastervolume" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
+                                    <li id="percentage">0</li>
+                                    <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown5'></span>
+                                        <input id="volume-5" type="text" readonly> 
+                                        <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp5'></span></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-2 grey" style="flex:1">
+                                <ul class="text-center">
+                                    <li><h4><b>Limitation</b></h4></li>
+                                    <li id="percentage">100%</li>
+                                    <input id="limitation" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
+                                    <li id="percentage">0</li>
+                                    <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown6'></span>
+                                        <input id="volume-6" type="text" readonly> 
+                                        <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp6'></span></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                     <div class="row systemfunction">
-                        <div>
-                            <div class="col-md-8">
-                                <div class="col-md-3 grey">
-                                    <ul class="text-center">
-                                        <li><h4><b>Line3</b></h4></li>
-                                        <li id="percentage">100%</li>
-                                        <input id="line3" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
-                                        <li id="percentage">0</li>
-                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown7'></span>
-                                            <input id="volume-7" type="text" readonly> 
-                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp7'></span></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-3 black"> 
-                                    <ul class="text-center">
-                                        <li><h4><b>Line 4</b></h4></li>
-                                        <li id="percentage">100%</li>
-                                        <input id="line4" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
-                                        <li id="percentage">0</li>
-                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown8'></span>
-                                            <input id="volume-8" type="text" readonly> 
-                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp8'></span></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-3 grey">
-                                    <ul class="text-center">
-                                        <li><h4><b>D-Bay L</b></h4></li>
-                                        <li id="percentage">100%</li>
-                                        <input id="dbayl" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
-                                        <li id="percentage">0</li>
-                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown9'></span>
-                                            <input id="volume-9" type="text" readonly> 
-                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp9'></span></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-3 black" id="same-height"> 
-                                    <ul class="text-center">
-                                        <li><h4><b>D-Bay R</b></h4></li>
-                                        <li id="percentage">100%</li>
-                                        <input id="dbayr" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
-                                        <li id="percentage">0</li>
-                                        <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown10'></span>
-                                            <input id="volume-10" type="text" readonly> 
-                                            <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp10'></span></li>
-                                    </ul>
-                                </div>
 
+                        <div style="display:flex">
+                            <div class="col-md-2 grey" style="flex:1">
+                                <ul class="text-center">
+                                    <li><h4><b>Line3</b></h4></li>
+                                    <li id="percentage">100%</li>
+                                    <input id="line3" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
+                                    <li id="percentage">0</li>
+                                    <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown7'></span>
+                                        <input id="volume-7" type="text" readonly> 
+                                        <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp7'></span></li>
+                                </ul>
                             </div>
-                            <div class="col-md-4" style="display:flex;"> 
-                                <div class="col-md-6 grey" >
-                                    <ul class="text-center">
-                                        <li><h4><b>Audio trigger</b></h4></li>
-                                        <li><h4 id="white">Engagement</h4></li>
-                                        <li><input type="checkbox"><p id="white">On</p></li>
-                                        <li><input type="checkbox"><p id="white">Off</p></li>
-                                        <li><input type="checkbox"><p id="white">Auto</p></li>
-                                        <li><h4 id="white">Delay to Off</h4></li>
-                                        <li><span><select>
-                                            <option value="0">0</option>
-                                            <option value="5">5</option>
-                                            <option value="10">10</option>
-                                            <option value="15">15</option>
-                                            </select>
-                                            <p id="white">mins</p></span></li>
-
-
-                                    </ul>
-                                </div>
-                                <div class="col-md-6 customgrey"> 
-                                </div>
-
+                            <div class="col-md-2 black" style="flex:1"> 
+                                <ul class="text-center">
+                                    <li><h4><b>Line 4</b></h4></li>
+                                    <li id="percentage">100%</li>
+                                    <input id="line4" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
+                                    <li id="percentage">0</li>
+                                    <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown8'></span>
+                                        <input id="volume-8" type="text" readonly> 
+                                        <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp8'></span></li>
+                                </ul>
                             </div>
+                            <div class="col-md-2 grey" style="flex:1">
+                                <ul class="text-center">
+                                    <li><h4><b>D-Bay L</b></h4></li>
+                                    <li id="percentage">100%</li>
+                                    <input id="dbayl" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
+                                    <li id="percentage">0</li>
+                                    <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown9'></span>
+                                        <input id="volume-9" type="text" readonly> 
+                                        <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp9'></span></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-2 black" style="flex:1"> 
+                                <ul class="text-center">
+                                    <li><h4><b>D-Bay R</b></h4></li>
+                                    <li id="percentage">100%</li>
+                                    <input id="dbayr" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="65" data-slider-orientation="vertical" />
+                                    <li id="percentage">0</li>
+                                    <li><span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown10'></span>
+                                        <input id="volume-10" type="text" readonly> 
+                                        <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp10'></span></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-2 grey" style="border-left-style: inset; border-left-width:medium; flex:1">
+                                <ul class="text-center">
+                                    <li><h4><b>Audio trigger</b></h4></li>
+                                    <li><h4 id="white">Engagement</h4></li>
+                                    <li><input type="checkbox"><p id="white">On</p></li>
+                                    <li><input type="checkbox"><p id="white">Off</p></li>
+                                    <li><input type="checkbox"><p id="white">Auto</p></li>
+                                    <li><h4 id="white">Delay to Off</h4></li>
+                                    <li><span><select>
+                                        <option value="0">0</option>
+                                        <option value="5">5</option>
+                                        <option value="10">10</option>
+                                        <option value="15">15</option>
+                                        </select>
+                                        <p id="white">mins</p></span></li>
+
+
+                                </ul>
+                            </div>
+                            <div class="col-md-2 customgrey" style="flex:1">
+                            </div>
+
                         </div>
                     </div>
 
@@ -407,12 +397,12 @@
 
 
                     <!--Input-->
-                    
+
                     <!--
-                    to set the input value run 
-                    $('#input1').text("value")
-                    max length is 17
-                    -->
+to set the input value run 
+$('#input1').text("value")
+max length is 17
+-->
                     <div class="row input">
 
                         <div class="col-md-4 customgrey" style="border-right-style:inset; border-right-width:medium"><div class="text-center">ZONE 1</div>
@@ -473,24 +463,24 @@
                                     <span class="white" style="width:95%"><h4 id="input3"></h4></span>
                                 </div>
                             </div>
-<!--
-                            <div class="row black">
-                                <ul>
-                                    <li class="text-center white"><h2>Right-in</h2></li>
+                            <!--
+<div class="row black">
+<ul>
+<li class="text-center white"><h2>Right-in</h2></li>
 
-                                    <div class="input-channel white" ><span style="width:50%"><input type="checkbox">RCA CH1/CH2</span>
-                                        <span style="width:50%"><input class="white" type="checkbox">Optical</span></div>
-                                    <div class="input-channel white"><span style="width:50%"><input type="checkbox">RCA CH3/CH4</span>
-                                        <span style="width:50%"><input class="white" type="checkbox">D-Bay</span></div>
+<div class="input-channel white" ><span style="width:50%"><input type="checkbox">RCA CH1/CH2</span>
+<span style="width:50%"><input class="white" type="checkbox">Optical</span></div>
+<div class="input-channel white"><span style="width:50%"><input type="checkbox">RCA CH3/CH4</span>
+<span style="width:50%"><input class="white" type="checkbox">D-Bay</span></div>
 
 
 
-                                </ul>
-                            </div>
+</ul>
+</div>
 -->
                         </div>
-                        
-                            
+
+
 
 
 
