@@ -1,6 +1,11 @@
 td{
     padding: 5% !important;
 }
+.crossover{
+    border-radius:25px !important;
+    border:2px solid white;
+    margin:5px;
+}
 .border-top{
     border-top-style:solid;border-left-style:solid;border-right-style:solid; border-color:white;
 }
