@@ -58,6 +58,12 @@
         $( "span#volumeUp10" ).click(function() {
             l10.bootstrapSlider('setValue',l10.val()- -1,true);//LOL
         });
+        $( "span#delayUp" ).click(function() {
+            delaytime.bootstrapSlider('setValue',delaytime.val()- -1,true);//LOL
+        });
+        $( "span#delayDown" ).click(function() {
+            delaytime.bootstrapSlider('setValue',delaytime.val()-1,true);//LOL
+        });
         var l1=$("#line1").bootstrapSlider({
             reversed:true
         });
@@ -88,7 +94,7 @@
         var l10=$("#dbayr").bootstrapSlider({
             reversed:true
         });
-        var se1=$("#filter-gain").bootstrapSlider({
+        var gain=$("#filter-gain").bootstrapSlider({
         })
         var delaytime=$("#delaytime").bootstrapSlider({
             reversed:true
@@ -103,6 +109,10 @@
         $("#volume-8").val(l8.val());
         $("#volume-9").val(l9.val());
         $("#volume-10").val(l10.val());
+        
+        //check
+        $("#delay-time").val(delaytime.val());
+        $("#gain").val(gain.val());
 
         $("#line1").on("slide", function(slideEvt) {
             $("#volume-1").val(slideEvt.value);
@@ -135,4 +145,12 @@
         });
         $("#dbayr").on("slide", function(slideEvt) {
             $("#volume-10").val(slideEvt.value);
+        });
+
+        //sliders on sound effect
+        $("#filter-gain").on("slide", function(slideEvt) {
+            $("#gain").val(slideEvt.value);
+        });
+        $("#delaytime").on("slide", function(slideEvt) {
+            $("#delay-time").val(slideEvt.value);
         });
