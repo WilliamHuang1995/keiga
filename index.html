@@ -711,10 +711,10 @@
                                     </div>
 
                                 </div>
-                                <div class="row">
+                                <div class="row filter">
                                     <div class="col-md-6 black text-center">
                                         <h4><b>Filter</b></h4>
-                                        <div class="filter">
+                                        <div class="filterborder">
                                             <table class="text-center white ">
                                                 <tr><td>High-pass</td><td><input type="checkbox"></td></tr>
                                                 <tr><td>Frequency</td><td><input type="number" class="black-font" style="width:40%"></td></tr>
@@ -726,7 +726,7 @@
                                                     </select></span></td></tr>
                                             </table>
                                         </div>
-                                        <div class="filter">
+                                        <div class="filterborder">
                                             <table class="text-center white ">
                                                 <tr><td>Low-pass</td><td><input type="checkbox"></td></tr>
                                                 <tr><td>Frequency</td><td><input type="number" class="black-font" style="width:40%"></td></tr>
@@ -738,7 +738,7 @@
                                                     </select></span></td></tr>
                                             </table>
                                         </div>
-                                        <div class="filter" style="padding:10px;margin-top:1em;">
+                                        <div class="filterborder" style="padding:10px;margin-top:1em;">
                                             <ul style="width:100%"><li style="display:flex;"><span style="width:50%;" class="text-left white">0</span>
                                                 <span style="width:50%;" class="text-right white">100</span></li>
                                                 <li><input id="filter-gain" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="20" style="width:90%"></li>
@@ -746,6 +746,39 @@
                                                 </li>
                                             </ul>
                                         </div>
+
+                                    </div>
+                                </div>
+                                <div class="row filter">
+                                    <div class="col-md-6 grey">
+                                        <div class="text-center" style="margin:1em 0; width:100%;">
+                                            <ul><li><h4><b>Phase shift</b></h4></li>
+                                                <li><select>       
+                                                    <option>180 degrees</option>       
+                                                    <option>270 degrees</option>       
+                                                    <option>360 degrees</option>       
+                                                    <option>720 degrees</option>                                        
+                                                    </select></li></ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row filter">
+                                    <div class="col-md-6 black">
+                                        <ul class="text-center" >
+                                            <li><h4><b>Delay time</b></h4></li>
+                                            <li id="percentage" >60</li>
+                                            <input id="delaytime" type="text" data-slider-id='shade' data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="20" data-slider-orientation="vertical" style="height:95%"/>
+                                            <li id="percentage">0</li>
+                                            <!--span class="glyphicon glyphicon-triangle-bottom sliderDown" id='volumeDown1'></span>
+                                                <input id="volume-1" type="text" readonly> 
+                                                <span  class="glyphicon glyphicon-triangle-top sliderUp" id='volumeUp1'></span-->
+                                            <div style="position:absolute; right:0;top:50%"><ul style="position:absolute; right:2em;"><span class="glyphicon glyphicon-triangle-top white sliderUp" id='delayUp'></span><li></li>
+                                                <li><input style="width:3em" id="delay-time" type="text" readonly></li>
+                                                <li><span class="glyphicon glyphicon-triangle-bottom white sliderDown" id='delayDown'></span></li>
+                                                </ul>
+                                            </div>
+
+                                        </ul>
                                     </div>
                                 </div>
 
