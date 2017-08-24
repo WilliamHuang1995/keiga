@@ -1,10 +1,19 @@
+
 td{
     padding: 5% !important;
 }
-.crossover{
+.crossover table{
+    align-self:center; 
+}
+.crossover td{
+    padding: 5% !important;
+}
+.crossover, .filter{
     border-radius:25px !important;
     border:2px solid white;
     margin:5px;
+    display:flex;
+    justify-content: center;
 }
 .border-top{
     border-top-style:solid;border-left-style:solid;border-right-style:solid; border-color:white;

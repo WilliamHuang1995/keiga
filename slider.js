@@ -88,6 +88,8 @@
         var l10=$("#dbayr").bootstrapSlider({
             reversed:true
         });
+        var se1=$("#filter-gain").bootstrapSlider({
+        })
         $("#volume-1").val(l1.val());
         $("#volume-2").val(l2.val());
         $("#volume-3").val(l3.val());
