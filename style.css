@@ -134,7 +134,7 @@ b{
 #percentage{
     color:darkgrey;
 }
-input#volume-1, #volume-2, #volume-3, #volume-4, #volume-5, #volume-6, #volume-7, #volume-8, #volume-9,#volume-10, #delay-time {
+input#volume-1, #volume-2, #volume-3, #volume-4, #volume-5, #volume-6, #volume-7, #volume-8, #volume-9,#volume-10 {
     color:black;
     width: 30%;
     margin:0 1em;
